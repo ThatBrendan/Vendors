@@ -1,0 +1,21 @@
+.navbar {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.navbar .logo {
+  height: 150px;
+}
+.navbar-menu {
+  display: flex;
+  gap: 20px;
+  text-transform: uppercase;
+}
+.navbar .active {
+  padding-bottom: 2px;
+  border-bottom: 2px solid var(--yellow);
+}
+.navbar li {
+  cursor: pointer;
+}

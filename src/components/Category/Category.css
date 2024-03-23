@@ -1,0 +1,30 @@
+.category-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 3rem 0;
+}
+.category-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.category-list-item {
+  align-items: center;
+  margin: 1rem 0;
+}
+.category-list-item img {
+  width: 150px;
+  border-radius: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+.category-list-item p {
+  text-align: center;
+  margin-top: 15px;
+}
+.category-list-item .active {
+  border: 4px solid var(--yellow);
+  padding: 2px;
+}

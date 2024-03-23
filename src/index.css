@@ -1,13 +1,92 @@
-body {
+:root {
+  --blue: #054aa9;
+  --borderWhite: #dedede;
+  --white: #ffffff;
+  --red: #df2a4c;
+  --black: #000000;
+  --grey: #f7e6d3;
+  --green: #1d4b3b;
+  --yellow: #e7a572;
+
+  --max-width: 1500px;
+  --navbar-height: 90px;
+}
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  width: 90%;
+  margin: auto;
+}
+a {
+  text-decoration: none;
+}
+ul,
+li {
+  list-style: none;
+}
+.yellowButton {
+  border: 2px solid var(--yellow);
+  padding: 2px 20px;
+  border-radius: 24px;
+  text-align: center;
+  background-color: var(--yellow);
+  color: var(--white);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.yellowButton:hover {
+  background-color: var(--white);
+  color: var(--yellow);
+}
+
+.whiteButton {
+  border: 2px solid var(--white);
+  padding: 2px 20px;
+  border-radius: 24px;
+  text-align: center;
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--bold-font);
+}
+
+.whiteButton:hover {
+  background-color: var(--white);
+  color: var(--blue);
+}
+
+.whiteButton,
+.yellowButton {
+  transition: color 0.2s, background-color 0.2s;
+}
+.animated {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animated.delay-1s {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
 }
